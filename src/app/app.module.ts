@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TableComponent } from './table/table.component';
+import {Ng2SmartTableModule} from 'ng2-smart-table';
+import {HttpClientModule} from '@angular/common/http';
+import {TableService} from './table/table.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    Ng2SmartTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
